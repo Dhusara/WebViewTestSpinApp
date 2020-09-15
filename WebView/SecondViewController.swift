@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import WebKit
+
+class SecondViewController: UIViewController, WKNavigationDelegate {
+    
+    @IBOutlet var webView: WKWebView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        webView.load(URLRequest(url: URL(string: "https://mostbet.com")!))
+    }
+}
